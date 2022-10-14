@@ -1,0 +1,29 @@
+{%extends 'attendence/dashboard.html'%}
+{% block content%}
+    <div class="container">
+                      <div class="row">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-8">
+                        <form action="/attendence/edit2/" method="post">
+                        {% csrf_token %}
+                        <input type="hidden" name="xid" value="{{data.id}}"/>
+                        <label style="font-family: cursive;">User</label>
+                        <input type="text" class="form-control" name="xname" value="{{data.username}}" placeholder="Enter your Name"><br>
+                        <label style="font-family: cursive;">Roll Number</label>
+                        <input type="text" class="form-control" name="xroll" value="{{data.rollno}}" placeholder="Enter your Roll Number"><br>
+                        <label style="font-family: cursive;">E-mail</label>
+                        <input type="text" class="form-control" name="xmail" value="{{data.email}}" placeholder="example@jietjodhpur.ac.in"><br>
+                        <label style="font-family: cursive;">Mobile Number</label>
+                        <input type="text" class="form-control" name="xmob" value="{{data.mobile}}" placeholder="9888XXXXXX"><br>
+                        <input type="file" value="{{data.image}}" name="xfile" class="form-control"/>
+                        <button type="submit" class="fluid btn btn-lg btn-danger btn-center m-5">Update</button>
+                      </form>
+                        </div>
+                        <div class="Col-sm-4"></div>
+                      </div>
+                    </div>
+
+
+
+
+{% endblock %}

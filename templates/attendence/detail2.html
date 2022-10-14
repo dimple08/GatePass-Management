@@ -1,0 +1,21 @@
+{% extends 'attendence/dashboard.html' %}
+{% block content%}
+
+<div class="container">
+    <div class="row">
+    <div class="col-sm-1"></div>
+        <div class="col-sm-5"><img src="/media/{{mydata.image}}" width="100%"></div> 
+            <div class="col-sm-5">
+              <div class="card-body">
+                          <h4><b style="font-family: century">Name:-</b> {{mydata.username}}</h4><br>
+                          <h4><b style="font-family: century">Roll No.:-</b> {{mydata.rollno}}</h4><br>
+                          <h4><b style="font-family: century">E-mail:-</b> {{mydata.email}}</h4><br>
+                          <h4><b style="font-family: century">Contact No.:-</b> {{mydata.mobile}}</h4><br>
+                          <h4><b style="font-family: century">Date and out-Time:-</b> {{time}}</h4><br>   
+                        </div>
+                       </div>
+                        <div class="Col-sm-1"></div>
+                      </div>
+                    </div>
+
+{%endblock%}

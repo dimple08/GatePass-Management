@@ -1,0 +1,22 @@
+{% extends 'attendence/dashboard.html' %}
+  {% block content %}
+                      <div class="col-sm-10">
+                      <div class="row pt-5">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-4" style="background-image: url('../../static/image/jiet.png'); background-repeat: no-repeat;background-size:contain;">
+                          <h2 class="text-center">ATTENDENCE</h2><br>
+{{err}}
+{{data}}
+    <form action="/attendence/detail/" method="post">
+    {% csrf_token %}
+  <label style="font-family: cursive;">Enter Your RollNo</label>
+  <input type="text" class="form-control" name="xroll" placeholder="Enter your RollNo"><br>
+  <input type="submit" class="fluid btn btn-lg btn-danger btn-center" value="OK"/>
+</form>
+                        </div>
+                        <div class="Col-sm-4"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        {%endblock%}

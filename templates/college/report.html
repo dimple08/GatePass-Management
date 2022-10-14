@@ -1,0 +1,52 @@
+{% extends 'admin/dashboard.html' %}
+
+{% block content %}
+
+	<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+				
+<h2 class="text-danger">Today Attendance</h2><table class="charts-css bar show-heading show-data-on-hover show-primary-axis" style="height: 200px;">
+       
+        <thead>
+          <tr>
+            <th>  Today Attendace<h2></th>
+            <th>Total Students </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+        
+            <td style="--size: {{(err['Today_attend']/50)}};padding-right:25px;"> <span class="data">{{err['Today_attend']}}  </span> <span class="tooltip">data: {{err['Today_attend']}}<br>Today Persent Student </span> 
+            	<h3 class="text-light text-center">Today Persent</h3></td>
+          </tr>
+          <tr>
+         
+            <td style="--size:{{err['total_student']/50}};padding-right:25px;"> <span class="data">{{err['total_student']}}</span> <span class="tooltip">data:{{err['total_student']}}<br>Total Student </span> 
+            	<h3 class="text-dark text-center">Total Student </h3></td>
+          </tr>
+         
+        </tbody>
+      </table>
+
+				</div>
+			</div>
+	<div class="row">
+				<div class="col-sm-1"></div>
+				<div class="col-sm-8">
+					<form action="" method="post" class="form-inline">
+						<label> Date </label>
+						<input type="date" name="xdate" class="form-control"/>
+					<label> Student REport</label>
+					<select class="form-control" name="xstud">
+						<option value=1>Today Absent student</option>
+						<option value=2>Today  Persent Student </option>
+						<option value=3> All Student </option>
+					</select>	
+					<input type="submit" name="submit" value="Submit">			
+					</form>
+				</div>
+				<div class="col-sm-3"></div>
+	</div>
+	</div>
+{% endblock %}

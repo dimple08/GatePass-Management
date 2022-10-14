@@ -1,0 +1,26 @@
+{% extends 'college/dashboard.html' %}
+  {% block content %}
+                    
+                    <div class="col-sm-10">
+                      <div class="row pt-5">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-6" >
+                          <form action="/college/studentreg/" method="post" enctype="multipart/form-data">
+                          {% csrf_token %}
+                        <label style="font-family: cursive;">User</label>
+                        <input type="text" class="form-control" name="xname" placeholder="Enter your Name"><br>
+                        <label style="font-family: cursive;">Roll Number</label>
+                        <input type="text" class="form-control" name="xroll" placeholder="Enter your Roll Number"><br>
+                        <label style="font-family: cursive;">E-mail</label>
+                        <input type="text" class="form-control" name="xmail" placeholder="example@jietjodhpur.ac.in"><br>
+                        <label style="font-family: cursive;">Mobile Number</label>
+                        <input type="text" class="form-control" name="xmob" placeholder="9888XXXXXX"><br>
+                        <input type="file" name="xfile" class="form-control"/>
+                        <button type="submit" class="fluid btn btn-lg btn-danger btn-center m-5">Submit</button>
+                      </form>
+                        </div>
+                        <div class="Col-sm-2"></div>
+                      </div>
+                    
+                
+      {%endblock%}
